@@ -16,40 +16,44 @@
    ROOT — CINEMATIC PALETTE
 ══════════════════════════════════════════ */
 :root{
-  --ink:#111111;
-  --ink-soft:#1B1B1D;
+  --ink:#161616;
+  --ink-soft:#22201D;
   --ink2:#2E2B27;
   --ink3:#6B6560;
-  --sand:#F5EFE7;
-  --sand2:#EDE5D8;
-  --sand3:#E0D4C3;
-  --orange:#C96B3B;
-  --orange-soft:#D97B66;
-  --orange-dim:rgba(201,107,59,0.10);
-  --orange-brd:rgba(201,107,59,0.22);
-  --ocean:#4C6472;
-  --moss:#6E7B61;
-  --smoke:#8E8A84;
+  --sand:#F7F1E8;
+  --sand2:#EFE4D6;
+  --sand3:#E3D5C0;
+  --sand-glow:#FFF9F2;
+  --orange:#D17842;
+  --orange-soft:#E89A6B;
+  --orange-dim:rgba(209,120,66,0.11);
+  --orange-brd:rgba(209,120,66,0.24);
+  --ocean:#5D7686;
+  --moss:#72846A;
+  --smoke:#938A81;
   --terminal:#FF9B54;
-  --dk:#131110;
-  --dk2:#1A1714;
-  --dk3:#222019;
-  --dk4:#2D2923;
+  --dk:#1A1815;
+  --dk2:#222019;
+  --dk3:#2A2722;
+  --dk4:#33302A;
+  --card-light:#2A2622;
   --radius:12px;
-  --glow:rgba(201,107,59,0.07);
+  --glow:rgba(209,120,66,0.12);
 }
 
 /* ── NIGHT OPS ─────────────────────────── */
 body.night-ops{
-  --orange:#A85420;
-  --orange-dim:rgba(168,84,32,0.07);
-  --dk:#0B0907;
-  --dk2:#111009;
-  --dk3:#171411;
-  --dk4:#211D18;
-  --glow:rgba(168,84,32,0.04);
+  --orange:#B86630;
+  --orange-dim:rgba(184,102,48,0.08);
+  --dk:#0E0C0A;
+  --dk2:#141210;
+  --dk3:#1A1815;
+  --dk4:#221F1A;
+  --glow:rgba(184,102,48,0.05);
+  --sand:#F0E8DC;
+  --sand2:#E5D9C8;
 }
-body.night-ops .nav{background:rgba(8,7,5,0.98);}
+body.night-ops .nav{background:rgba(10,8,6,0.98);}
 body.night-ops .night-tag{display:inline-flex !important;}
 
 body{
@@ -261,6 +265,17 @@ body::before{
 .ck-o  {background:var(--orange);border:none;}
 .ck-s  {background:var(--sand);border:1px solid var(--sand3);}
 .ck-s2 {background:var(--sand2);border:1px solid var(--sand3);}
+/* warm light zone — for gallery/memory/reading sections */
+.ck-warm{
+  background:linear-gradient(135deg,var(--sand-glow) 0%,var(--sand2) 100%);
+  border:1px solid var(--sand3);
+}
+/* glass card — subtle backdrop blur for layered depth */
+.ck-glass{
+  background:rgba(34,32,29,0.72);
+  border:1px solid rgba(255,249,242,0.07);
+  backdrop-filter:blur(12px);
+}
 
 /* typography atoms */
 .eye{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;}
@@ -321,48 +336,59 @@ body::before{
 .domain-desc{font-size:10px;font-weight:300;color:var(--ink3);line-height:1.55;}
 
 /* ══════════════════════════════════════════
-   MEMORY LOGS
+   MEMORY LOGS — warm light zone
 ══════════════════════════════════════════ */
-.memory-logs{margin-bottom:10px;}
+.memory-logs{
+  margin-bottom:10px;
+  background:linear-gradient(135deg,var(--sand-glow) 0%,var(--sand2) 100%);
+  border:1px solid var(--sand3);
+  border-radius:var(--radius);
+  padding:18px;
+}
 .memory-header{
   font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--ink3);margin-bottom:10px;
+  color:var(--smoke);margin-bottom:10px;
   font-family:'DM Mono',monospace;
 }
 .memory-row{
   display:flex;gap:14px;align-items:baseline;
-  padding:9px 0;
-  border-bottom:1px solid var(--dk4);
+  padding:9px 0;border-bottom:1px solid var(--sand3);
 }
 .memory-row:last-child{border-bottom:none;}
 .memory-year{
   font-family:'DM Mono',monospace;font-size:10px;
   color:var(--orange);flex-shrink:0;width:36px;
 }
-.memory-note{font-size:11px;font-weight:300;color:var(--ink3);line-height:1.6;}
+.memory-note{font-size:11px;font-weight:300;color:var(--ink2);line-height:1.6;}
 
 /* ══════════════════════════════════════════
-   EXPERIENCE GALLERY
+   EXPERIENCE GALLERY — warm light zone
 ══════════════════════════════════════════ */
-.gallery-wrap{margin-bottom:10px;}
+.gallery-wrap{
+  margin-bottom:10px;
+  background:linear-gradient(160deg,var(--sand-glow) 0%,var(--sand2) 100%);
+  border:1px solid var(--sand3);
+  border-radius:var(--radius);
+  padding:18px;
+}
 .gallery-eyebrow{
   font-size:9px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--ink3);font-family:'DM Mono',monospace;margin-bottom:8px;
+  color:var(--smoke);font-family:'DM Mono',monospace;margin-bottom:10px;
 }
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
 .g-item{
   position:relative;border-radius:10px;overflow:hidden;
   height:190px;cursor:pointer;
-  border:1px solid var(--dk4);
-  background:var(--dk2);
+  border:1px solid rgba(0,0,0,.08);
+  background:var(--sand3);
 }
 .g-item.wide{grid-column:span 2;}
 .g-item img{
   width:100%;height:100%;object-fit:cover;display:block;
   transition:transform .5s ease,filter .4s ease;
-  filter:brightness(.78) saturate(.9);
+  filter:brightness(.82) saturate(.88);
 }
-.g-item:hover img{transform:scale(1.06);filter:brightness(.38) saturate(.7);}
+.g-item:hover img{transform:scale(1.06);filter:brightness(.36) saturate(.7);}
 .g-caption{
   position:absolute;inset:0;
   display:flex;align-items:flex-end;padding:12px;
@@ -372,8 +398,8 @@ body::before{
 .g-caption-inner{
   font-family:'DM Mono',monospace;font-size:9px;
   color:var(--terminal);line-height:1.7;
-  background:rgba(10,8,6,.76);
-  border:1px solid rgba(255,155,84,.16);
+  background:rgba(10,8,6,.8);
+  border:1px solid rgba(255,155,84,.18);
   border-radius:6px;padding:8px 10px;width:100%;
 }
 .g-caption-inner::before{content:'> ';color:var(--orange);}
@@ -793,7 +819,7 @@ function buildPage1(d){
   // MEMORY LOGS
   const visLogs = d.memory_logs.filter(l => l.visible);
   if(visLogs.length){
-    const logsWrap = el('div','card ck-dk w2 memory-logs');
+    const logsWrap = el('div','memory-logs');
     logsWrap.innerHTML = `<div class="memory-header">// system memory logs</div>` +
       visLogs.map(l=>`
         <div class="memory-row">
