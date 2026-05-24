@@ -1,186 +1,149 @@
 {
   "system_status": {
     "logo_text": "KAITLYNARY",
+    "tagline": "Tech PO · Finance Systems · Global Scale",
     "status_messages": [
       "System Status: Fully Charged ⚡",
       "Runtime Environment: Ho Chi Minh City",
-      "Current Deployment: Global Finance PO · Mantu",
-      "Scope: 60+ Countries · 20+ Subsidiaries",
+      "Current Deployment: Global Finance Ecosystem",
+      "After-Hours Mode: Island Recovery Protocol 🌊",
+      "Backlog Priority: Exploring Next Big Challenges",
       "Current State: High Availability"
     ]
   },
 
+  "nav": [
+    { "label": "/runtime",      "page": "p1" },
+    { "label": "/architecture", "page": "p2" },
+    { "label": "/mission-log",  "page": "p3" },
+    { "label": "/deployments",  "page": "p4" },
+    { "label": "/system-health","page": "p5" }
+  ],
+
   "hero_section": {
     "visible": true,
     "pills": [
-      "[ ⚡ PO × BA Hybrid ]",
-      "[ 💼 Finance Domain · Global ERP ]",
-      "[ 🌏 60+ Countries in Scope ]",
+      "[ ⚡ OS: v2026.Build ]",
+      "[ 💼 Tech PO × Finance Domain ]",
+      "[ 🥾 Trekker · 🗺 Local Explorer · 📚 Bookworm ]",
       "[ 📍 Based in HCMC ]"
     ],
-    "title": "I SHIP<br>PRODUCTS<br><em>THAT MOVE</em><br>MONEY",
-    "subtitle": "5+ years turning financial complexity into products that actually ship — from APAC government ministries to a 60-country ERP at Mantu. I live where compliance meets delivery.",
-    "cta_primary": "See my work ↗",
+    "title": "I RUN COMPLEX TECH PRODUCTS BY DAY.<br>AND TREK <em>WILD TRAILS</em> BY NIGHT.",
+    "subtitle": "5+ years turning financial complexity into products that actually ship — from APAC government ministries to a 60-country ERP at Mantu. This operating system sustains high availability through trekking endurance, local cultural curiosity, and the quiet clarity that only deep reading provides. I don't just ship products. I run systems at peak stability.",
+    "cta_primary": "View Deployments ↗",
     "cta_primary_target": "p4",
-    "cta_secondary": "Get in touch",
+    "cta_secondary": "Open System Health",
     "cta_secondary_target": "p5"
   },
 
   "ticker_items": [
-    { "sym": "$", "text": "Product Owner · Mantu · 60+ countries" },
-    { "sym": "€", "text": "E-invoicing · EU & APAC compliance" },
-    { "sym": "₫", "text": "Gov finance digitalization · APAC" },
-    { "sym": "£", "text": "ERP · SAP · Workday · SharePoint" },
-    { "sym": "¥", "text": "Agile PO · BA Lead · PM · Cross-timezone" }
+    { "sym": "$",  "text": "Product Owner · Mantu · 60+ countries" },
+    { "sym": "€",  "text": "E-invoicing · EU & APAC compliance" },
+    { "sym": "₫",  "text": "Gov finance digitalization · APAC" },
+    { "sym": "£",  "text": "ERP · SAP · Workday · SharePoint" },
+    { "sym": "¥",  "text": "Agile PO · BA Lead · PM · Cross-timezone" },
+    { "sym": "🌊", "text": "After-Hours: Island Recovery Protocol" },
+    { "sym": "🥾", "text": "Trek Log: Resilience Architecture" },
+    { "sym": "📚", "text": "Reading Stack: Continuous Discovery Habits" }
   ],
 
   "live_metrics": [
-    { "number": "60+", "label": "Countries in current PO scope at Mantu" },
-    { "number": "50+", "label": "Business workflows streamlined at CMC" },
-    { "number": "95%", "label": "Stakeholder satisfaction rate across clients" }
+    { "visible": true, "number": 60,  "suffix": "+", "label": "Countries Impacted" },
+    { "visible": true, "number": 50,  "suffix": "+", "label": "Enterprise Workflows Optimized" },
+    { "visible": true, "number": 95,  "suffix": "%", "label": "Stakeholder Satisfaction Rate" },
+    { "visible": true, "number": 12,  "suffix": "+", "label": "Solo Trips Executed" },
+    { "visible": true, "number": 5,   "suffix": "",  "label": "E-invoicing Gateways Live" },
+    { "visible": true, "number": 3,   "suffix": "",  "label": "Books Currently in Stack" }
   ],
 
   "highlight_cards": [
     {
       "visible": true,
       "skin": "ck-o",
-      "eye": "right now",
+      "eye": "current deployment",
       "eye_style": "eye-o",
       "big": "GLOBAL<br>FINANCE PO",
       "big_style": "big-k fs26",
-      "body": "Owning the Cash & Working Capital pillar at Mantu — 60+ countries, 20+ subsidiaries, 5 e-invoicing gateways.",
+      "body": "Owning Cash & Working Capital at Mantu — 60+ countries, 20+ subsidiaries, 5 e-invoicing gateways live.",
       "body_style": "body-o"
     },
     {
       "visible": true,
       "skin": "ck-dk",
-      "eye": "the rare combo",
+      "eye": "rare configuration",
       "eye_style": "eye-m",
       "big": "BA × PO<br>HYBRID",
       "big_style": "big-o fs26",
-      "body": "Promoted to PM by clients. Appointed PO in-house. I've done both sides of the table — that's the whole point.",
+      "body": "Promoted to PM by clients. Appointed PO in-house. Both sides of the table — that's the architecture.",
       "body_style": "body-m"
     }
   ],
 
   "domain_coverage": [
-    {
-      "visible": true,
-      "icon": "🏛",
-      "name": "Gov Finance Digitalization",
-      "desc": "Finance ministry products for APAC gov — where the margin for error is literally zero"
-    },
-    {
-      "visible": true,
-      "icon": "📑",
-      "name": "E-invoicing & EU Compliance",
-      "desc": "Belgium, Portugal, Italy, China, Vietnam — regulatory mandates turned into product specs"
-    },
-    {
-      "visible": true,
-      "icon": "💱",
-      "name": "Cash & Working Capital",
-      "desc": "End-to-end: Cash Advance → Expense → Billing → Payment → Accounting → GL entries"
-    },
-    {
-      "visible": true,
-      "icon": "🌐",
-      "name": "Global Enterprise DX",
-      "desc": "Automotive in Korea/Turkey/Germany, marine, construction, data centers — cross-timezone delivery"
-    }
+    { "visible": true, "icon": "🏛", "name": "Gov Finance Digitalization", "desc": "Finance ministry products for APAC gov — zero margin for error" },
+    { "visible": true, "icon": "📑", "name": "E-invoicing & EU Compliance", "desc": "Belgium, Portugal, Italy, China, Vietnam — mandates into product specs" },
+    { "visible": true, "icon": "💱", "name": "Cash & Working Capital", "desc": "End-to-end: Cash Advance → Expense → Billing → Payment → GL" },
+    { "visible": true, "icon": "🌐", "name": "Global Enterprise DX", "desc": "Automotive, marine, construction, data centers — cross-timezone delivery" }
+  ],
+
+  "memory_logs": [
+    { "visible": true, "year": "2020", "note": "First contact with finance domain through securities research at FTU." },
+    { "visible": true, "year": "2022", "note": "Learned what it means to translate chaos into structured requirements." },
+    { "visible": true, "year": "2023", "note": "Promoted to PM by international clients. Realized I was already operating as one." },
+    { "visible": true, "year": "2024", "note": "Navigating compliance systems across multiple regions simultaneously." },
+    { "visible": true, "year": "2025", "note": "Learning endurance from long solo journeys. Trekking teaches risk management." },
+    { "visible": true, "year": "2026", "note": "Building products from Ho Chi Minh City. High availability mode: active." }
+  ],
+
+  "experience_gallery": [
+    { "visible": true, "wide": true,  "image_url": "https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=900&q=80", "caption": "Location: Wild Trails · System Status: Recharging ⚡" },
+    { "visible": true, "wide": false, "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80", "caption": "Location: Mountain Summit · Mode: Deep Focus Protocol" },
+    { "visible": true, "wide": false, "image_url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80", "caption": "Location: Local Culture Scan · Status: Curiosity.exe Running" },
+    { "visible": true, "wide": false, "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", "caption": "Location: Reading Station · Process: Knowledge Ingestion v2026" },
+    { "visible": true, "wide": false, "image_url": "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=600&q=80", "caption": "Location: Island Basecamp · After-Hours Mode: Active 🌊" }
   ],
 
   "skills": {
     "product_ownership": {
       "visible": true,
-      "tags": [
-        "Product strategy & roadmapping",
-        "Backlog prioritization",
-        "Sprint planning & refinement",
-        "Acceptance criteria",
-        "Executive stakeholder management",
-        "OKR alignment",
-        "Release planning",
-        "Agile Scrum leadership",
-        "Lean Startup"
-      ]
+      "tags": ["Product strategy & roadmapping","Backlog prioritization","Sprint planning & refinement","Acceptance criteria","Executive stakeholder management","OKR alignment","Release planning","Agile Scrum leadership","Lean Startup"]
     },
     "ba_craft": {
       "visible": true,
-      "tags": [
-        "Requirements elicitation",
-        "BRD · SRS · FRD",
-        "Process modeling · BPMN",
-        "User story writing",
-        "UAT coordination",
-        "Gap analysis",
-        "API mapping · ERD",
-        "Data dictionary",
-        "UI/UX prototyping",
-        "Stakeholder workshops"
-      ]
+      "tags": ["Requirements elicitation","BRD · SRS · FRD","Process modeling · BPMN","User story writing","UAT coordination","Gap analysis","API mapping · ERD","Data dictionary","UI/UX prototyping","Stakeholder workshops"]
     },
     "finance_domain": {
       "visible": true,
-      "tags": [
-        "E-invoicing compliance",
-        "Cash advance lifecycle",
-        "Billing & payment",
-        "AP · AR tracking",
-        "GL & accounting entries",
-        "Currency conversion",
-        "Tax regulatory mapping",
-        "Financial workflows",
-        "KPI & reporting logic"
-      ]
+      "tags": ["E-invoicing compliance","Cash advance lifecycle","Billing & payment","AP · AR tracking","GL & accounting entries","Currency conversion","Tax regulatory mapping","Financial workflows","KPI & reporting logic"]
     },
     "toolbox": {
       "visible": true,
       "categories": [
-        {
-          "label": "E-invoicing gateways",
-          "tags": ["Sovos", "SEAM", "Indicom", "MISA", "MagniFinance"]
-        },
-        {
-          "label": "ERP & enterprise",
-          "tags": ["SAP S/4HANA", "Workday", "Kyriba", "Expensya", "TravelPerk"]
-        },
-        {
-          "label": "Design & modelling",
-          "tags": ["Figma", "draw.io", "Miro"]
-        },
-        {
-          "label": "Low-code & automation",
-          "tags": ["MS Power Platform", "SharePoint", "DocuSign"]
-        },
-        {
-          "label": "Data & API",
-          "tags": ["MySQL", "DBeaver", "SQL", "Postman"]
-        },
-        {
-          "label": "Delivery",
-          "tags": ["Jira", "Confluence", "Zoho Suite"]
-        }
+        { "label": "E-invoicing gateways", "tags": ["Sovos","SEAM","Indicom","MISA","MagniFinance"] },
+        { "label": "ERP & enterprise",     "tags": ["SAP S/4HANA","Workday","Kyriba","Expensya","TravelPerk"] },
+        { "label": "Design & modelling",   "tags": ["Figma","draw.io","Miro"] },
+        { "label": "Low-code & automation","tags": ["MS Power Platform","SharePoint","DocuSign"] },
+        { "label": "Data & API",           "tags": ["MySQL","DBeaver","SQL","Postman"] },
+        { "label": "Delivery",             "tags": ["Jira","Confluence","Zoho Suite"] }
       ]
     },
     "languages": [
-      { "visible": true, "flag": "🇺🇸", "name": "English", "level": "IELTS 7.0 · TOEIC 885" },
-      { "visible": true, "flag": "🇯🇵", "name": "Japanese", "level": "JLPT N3" },
+      { "visible": true, "flag": "🇺🇸", "name": "English",    "level": "IELTS 7.0 · TOEIC 885" },
+      { "visible": true, "flag": "🇯🇵", "name": "Japanese",   "level": "JLPT N3" },
       { "visible": true, "flag": "🇻🇳", "name": "Vietnamese", "level": "Native" }
     ]
   },
 
   "journey_header": {
     "visible": true,
-    "eye": "the journey",
+    "eye": "mission log",
     "title": "NOT A STRAIGHT LINE. THAT'S THE POINT.",
     "body": "Started as delivery support. Grew into BA. Got promoted to PM by international clients. Appointed PO in outsourcing. Now owning a 60-country financial ecosystem at Mantu."
   },
 
   "experience_timeline": [
     {
-      "visible": true,
-      "dot_style": "major",
+      "visible": true, "dot_style": "major",
       "company": "Mantu",
       "role": "Product Owner — Global Financial Management System · Cash & Working Capital",
       "date": "05/2025 – Present · Ho Chi Minh City",
@@ -194,8 +157,7 @@
       "awards": []
     },
     {
-      "visible": true,
-      "dot_style": "major",
+      "visible": true, "dot_style": "major",
       "company": "CMC Global",
       "role": "Senior Business Analyst → BA Lead → Project Manager → Product Owner",
       "date": "06/2023 – 04/2025 · Hanoi",
@@ -206,15 +168,10 @@
         "Appointed Product Owner — owned backlog and aligned product vision with client PMs",
         "95% stakeholder satisfaction across all international clients"
       ],
-      "awards": [
-        "⭐ Outstanding Performance 2024",
-        "⭐ Rising Star Q4/2023",
-        "⭐ Best Project 2023"
-      ]
+      "awards": ["⭐ Outstanding Performance 2024","⭐ Rising Star Q4/2023","⭐ Best Project 2023"]
     },
     {
-      "visible": true,
-      "dot_style": "major",
+      "visible": true, "dot_style": "major",
       "company": "SmartOSC",
       "role": "Business Analyst",
       "date": "10/2022 – 06/2023 · Hanoi",
@@ -227,8 +184,7 @@
       "awards": []
     },
     {
-      "visible": true,
-      "dot_style": "minor",
+      "visible": true, "dot_style": "minor",
       "company": "Savvycom",
       "role": "Business Analyst",
       "date": "08/2022 – 10/2022 · Hanoi",
@@ -239,8 +195,7 @@
       "awards": []
     },
     {
-      "visible": true,
-      "dot_style": "minor",
+      "visible": true, "dot_style": "minor",
       "company": "Equest Education Group",
       "role": "Product Owner Assistant",
       "date": "03/2020 – 12/2021 · Hanoi",
@@ -251,62 +206,50 @@
       "awards": []
     },
     {
-      "visible": true,
-      "dot_style": "minor",
+      "visible": true, "dot_style": "minor",
       "company": "Securities Investment Club — FTU",
       "role": "Deputy Head, Industry Research Department",
       "date": "2019 – 2020 · Hanoi",
-      "bullets": [
-        "Led industry research and securities analysis — first contact with finance domain"
-      ],
+      "bullets": ["Led industry research and securities analysis — first contact with finance domain"],
       "awards": []
     }
   ],
 
-  "work_strip": [
-    "MANTU FINANCIAL ECOSYSTEM",
-    "APAC GOV FINANCE SYSTEM",
-    "DIGITAL WORKSPACE BUILD",
-    "AUTOMOTIVE INCENTIVE PLATFORM"
-  ],
+  "work_strip": ["MANTU FINANCIAL ECOSYSTEM","APAC GOV FINANCE SYSTEM","DIGITAL WORKSPACE BUILD","AUTOMOTIVE INCENTIVE PLATFORM"],
 
   "case_studies": [
     {
-      "visible": true,
-      "icon": "🌍",
+      "visible": true, "icon": "🌍",
       "name": "Global Financial Execution Ecosystem — Mantu",
-      "tags": ["Product Owner", "E-invoicing", "ERP", "60+ countries", "API Design"],
-      "chips": ["Product Owner", "60+ countries", "20+ subsidiaries", "Sovos · SEAM · Indicom · MISA · MagniFinance"],
+      "tags": ["Product Owner","E-invoicing","ERP","60+ countries","API Design","Finance"],
+      "chips": ["Product Owner","60+ countries","20+ subsidiaries","Sovos · SEAM · Indicom · MISA · MagniFinance"],
       "problem": "60+ countries. 20+ subsidiaries. Fragmented e-invoicing across EU and Asia on a single shared ERP. Every country had different tax mandates, schemas, and compliance deadlines — with zero unified approach.",
       "what_i_did": "End-to-end Cash & Working Capital pillar: Cash Advance → Expense Declaration → Billing → Payment → GL entries. Architected central financial middleware connecting Expensya, TravelPerk, Kyriba, and the ERP simultaneously. Designed API flows and XML/JSON schemas per country gateway.",
       "outcome": "100% tax compliance across all active markets. Multi-gateway e-invoicing live: Belgium/France (Sovos), China (SEAM), Italy (Indicom), Vietnam (MISA), Portugal (MagniFinance). ERP synchronization governing AR/AP lifecycle and audit traceability."
     },
     {
-      "visible": true,
-      "icon": "🏛",
+      "visible": true, "icon": "🏛",
       "name": "Finance Management System — APAC Government Ministry",
-      "tags": ["Business Analyst", "Gov Finance", "SharePoint", "Agile"],
-      "chips": ["Business Analyst", "25-person team", "15 months", "SharePoint · Agile SDLC"],
+      "tags": ["Business Analyst","Gov Finance","SharePoint","Agile","Compliance"],
+      "chips": ["Business Analyst","25-person team","15 months","SharePoint · Agile SDLC"],
       "problem": "A government finance ministry ran invoices, payment vouchers, and approvals on paper. Slow, unauditable, zero traceability. NDA project.",
       "what_i_did": "Collaborated with Singapore UX/UI squad and Vietnamese scrum teams. Mapped workflows via activity, DFD, state, and use case diagrams. Traveled onsite to Singapore for intensive discovery sessions with end users.",
       "outcome": "Fully digitized core finance workflows on SharePoint. Paper chaos → auditable digital processes. Ministry stakeholders validated through structured UAT."
     },
     {
-      "visible": true,
-      "icon": "🏢",
+      "visible": true, "icon": "🏢",
       "name": "Enterprise Digital Workspace — Post-Spinoff Company Build",
-      "tags": ["BA Lead", "SAP", "Workday", "Digital Transformation"],
-      "chips": ["BA Lead", "20-person team", "7 months", "SAP S/4HANA · Workday · MS Power Platform"],
+      "tags": ["BA Lead","SAP","Workday","Digital Transformation","ERP"],
+      "chips": ["BA Lead","20-person team","7 months","SAP S/4HANA · Workday · MS Power Platform"],
       "problem": "A Singaporean data center company had just split from its holding group. It needed to build a complete digital workspace from scratch — all departments, all processes, zero existing infrastructure.",
       "what_i_did": "Led BA team to automate 40+ core processes across Finance, Procurement, Legal, Sales & HR. Facilitated technical investigations with SAP/Workday experts to define API and data mapping. Managed sprint delivery and BA resourcing across all workstreams simultaneously.",
       "outcome": "40+ processes centralized and integrated. Project extended 3 months with 5 additional resources — client confidence signal. Full Go-live and post-launch enhancement delivered."
     },
     {
-      "visible": true,
-      "icon": "🚗",
+      "visible": true, "icon": "🚗",
       "name": "Sales Incentivization Portal — Global Automotive Brand",
-      "tags": ["Business Analyst", "Automotive", "Multi-market", "Incentive Platform"],
-      "chips": ["Business Analyst", "3 phased releases", "Korea · Turkey · Thailand"],
+      "tags": ["Business Analyst","Automotive","Multi-market","Product Backlog"],
+      "chips": ["Business Analyst","3 phased releases","Korea · Turkey · Thailand"],
       "problem": "A top-tier automotive brand had no unified global platform to run sales competitions and incentive programs across multiple markets.",
       "what_i_did": "Ran cross-regional requirement workshops. Translated business objectives into wireframes, functional specs, and acceptance criteria. Managed product backlog across 3 phased releases.",
       "outcome": "Platform live across Korea, Turkey, Thailand. Agents earning and redeeming points under custom incentive schemes. Delivered iteratively in 3 phases."
@@ -326,50 +269,23 @@
       "body": "Most BAs document. I translate. Most POs prioritize. I understand the regulatory why behind every priority. When you're shipping financial products for governments and global ERPs, that distinction matters enormously."
     },
     "education": [
-      {
-        "visible": true,
-        "icon": "🎓",
-        "title": "Bachelor — Japanese Style International Business",
-        "institution": "Foreign Trade University (FTU)",
-        "date": "2019 – 2023 · Hanoi, Vietnam"
-      },
-      {
-        "visible": true,
-        "icon": "📈",
-        "title": "Securities Investment Club — Deputy Head, Industry Research",
-        "institution": "Foreign Trade University",
-        "date": "2019 – 2020 · First finance domain exposure"
-      }
+      { "visible": true, "icon": "🎓", "title": "Bachelor — Japanese Style International Business", "institution": "Foreign Trade University (FTU)", "date": "2019 – 2023 · Hanoi, Vietnam" },
+      { "visible": true, "icon": "📈", "title": "Securities Investment Club — Deputy Head, Industry Research", "institution": "Foreign Trade University", "date": "2019 – 2020 · First finance domain exposure" }
     ],
     "certifications": [
-      { "visible": true, "name": "Plan the Project as a Business Analyst — IIBA Endorsed", "year": "2025", "is_in_progress": false },
-      { "visible": true, "name": "PL-900: Microsoft Power Platform Fundamentals", "year": "2025", "is_in_progress": false },
-      { "visible": true, "name": "Automation Business Analysis — UiPath · Coursera", "year": "2023", "is_in_progress": false },
-      { "visible": true, "name": "Practical SQL for Data Analytics", "year": "2022", "is_in_progress": false },
-      { "visible": true, "name": "Product Management Foundation — AIESEC Vietnam", "year": "2022", "is_in_progress": false },
-      { "visible": true, "name": "User Experience: The Beginner's Guide — IDF", "year": "2022", "is_in_progress": false },
-      { "visible": true, "name": "AWS Machine Learning Specialty", "year": "In progress", "is_in_progress": true },
-      { "visible": true, "name": "AWS Generative AI", "year": "In progress", "is_in_progress": true }
+      { "visible": true, "name": "Plan the Project as a Business Analyst — IIBA Endorsed",  "year": "2025", "is_in_progress": false },
+      { "visible": true, "name": "PL-900: Microsoft Power Platform Fundamentals",            "year": "2025", "is_in_progress": false },
+      { "visible": true, "name": "Automation Business Analysis — UiPath · Coursera",         "year": "2023", "is_in_progress": false },
+      { "visible": true, "name": "Practical SQL for Data Analytics",                          "year": "2022", "is_in_progress": false },
+      { "visible": true, "name": "Product Management Foundation — AIESEC Vietnam",            "year": "2022", "is_in_progress": false },
+      { "visible": true, "name": "User Experience: The Beginner's Guide — IDF",              "year": "2022", "is_in_progress": false },
+      { "visible": true, "name": "AWS Machine Learning Specialty",                            "year": "In progress", "is_in_progress": true },
+      { "visible": true, "name": "AWS Generative AI",                                         "year": "In progress", "is_in_progress": true }
     ],
     "currently": [
-      {
-        "visible": true,
-        "icon": "🌏",
-        "title": "Owning a 60-country PO scope",
-        "body": "Learning what it really means to build for global scale — regulatory deadlines in Belgium, compliance gaps in Vietnam, payment flows in Brazil, all at once."
-      },
-      {
-        "visible": true,
-        "icon": "📚",
-        "title": "Reading",
-        "body": "Continuous Discovery Habits — thinking about how structured discovery translates to enterprise ERP contexts where the 'user' is a treasury director."
-      },
-      {
-        "visible": true,
-        "icon": "🎯",
-        "title": "Building toward",
-        "body": "Deepening PO craft in complex financial ecosystems. Looking for the next challenge where money, product, and global scale intersect."
-      }
+      { "visible": true, "icon": "🌏", "title": "Owning a 60-country PO scope", "body": "Learning what it really means to build for global scale — regulatory deadlines in Belgium, compliance gaps in Vietnam, payment flows in Brazil, all at once." },
+      { "visible": true, "icon": "📚", "title": "Reading", "body": "Continuous Discovery Habits — thinking about how structured discovery translates to enterprise ERP contexts where the 'user' is a treasury director." },
+      { "visible": true, "icon": "🎯", "title": "Building toward", "body": "Deepening PO craft in complex financial ecosystems. Looking for the next challenge where money, product, and global scale intersect." }
     ]
   },
 
@@ -377,48 +293,27 @@
     "visible": true,
     "title": "LET'S BUILD SOMETHING THAT MOVES MONEY.",
     "subtitle": "Open to Finance PO roles · Fintech · Global ERP products · Payment platforms",
-    "button_label": "Deploy Tech PO v2026 to Your Workspace",
-    "email": "phuonglt13.sic@gmail.com"
+    "button_label": "Deploy Kaitlyn v2026 to Your Workspace",
+    "email": "phuonglt13.sic@gmail.com",
+    "terminal_lines": [
+      "> Initializing deployment sequence...",
+      "> Scanning: Finance domain expertise ✓",
+      "> Scanning: 60-country operational scope ✓",
+      "> Scanning: Cross-timezone delivery record ✓",
+      "> Scanning: BA × PO hybrid configuration ✓",
+      "> Scanning: High Availability mode ✓",
+      "> Status: READY FOR DEPLOYMENT ⚡"
+    ]
   },
 
-  "experience_gallery": [
-    {
-      "visible": true,
-      "wide": true,
-      "image_url": "https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=800&q=80",
-      "caption": "Location: Wild Trails · System Status: Recharging ⚡"
-    },
-    {
-      "visible": true,
-      "wide": false,
-      "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80",
-      "caption": "Location: Mountain Summit · Mode: Deep Focus Protocol"
-    },
-    {
-      "visible": true,
-      "wide": false,
-      "image_url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80",
-      "caption": "Location: Local Culture Scan · Status: Curiosity.exe Running"
-    },
-    {
-      "visible": true,
-      "wide": false,
-      "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
-      "caption": "Location: Reading Station · Process: Knowledge Ingestion v2026"
-    },
-    {
-      "visible": true,
-      "wide": false,
-      "image_url": "https://images.unsplash.com/photo-1527856263669-12c3a0af2aa6?w=600&q=80",
-      "caption": "Location: HCMC Basecamp · Deployment: Active"
-    }
-  ],
-
   "terminal_commands": {
-    "about": "Kaitlyn // Finance PO × BA Hybrid. 5+ yrs shipping products where compliance meets delivery. Currently owning 60-country scope at Mantu.",
-    "deploy": "Initiating deployment sequence...\n> Scanning: Finance domain ✓\n> Scanning: ERP integration ✓\n> Scanning: Cross-timezone ops ✓\n> Status: READY FOR DEPLOYMENT\n> Contact: phuonglt13.sic@gmail.com",
-    "projects": "Active projects:\n[1] Global Financial Execution Ecosystem — Mantu (PO)\n[2] Finance Management System — APAC Gov Ministry (BA)\n[3] Enterprise Digital Workspace — Singapore (BA Lead)\n[4] Sales Incentivization Portal — Automotive (BA)",
-    "system-health": "System health report:\n> Uptime: 5+ years\n> Fuel level: ☕ Coffee\n> Mode: High Availability\n> Domain expertise: LOADED\n> Status: FULLY OPERATIONAL",
-    "contact": "Reach Kaitlyn at:\n> Email: phuonglt13.sic@gmail.com\n> Location: Ho Chi Minh City, Vietnam\n> Timezone: GMT+7\n> Response time: <24h"
+    "about":            "Kaitlyn // Tech PO × Senior BA. Finance domain. 60-country ERP at Mantu. Ships products that move money across borders.",
+    "deploy":           "> Initiating contact protocol...\n> Profile: Tech PO · Finance Systems · Global Scale\n> Location: Ho Chi Minh City, GMT+7\n> Availability: Open to right opportunity\n> Contact: phuonglt13.sic@gmail.com\n> Status: READY ⚡",
+    "projects":         "> Active deployments:\n  [1] Global Financial Execution Ecosystem — Mantu (PO)\n  [2] Finance Management System — APAC Gov Ministry (BA)\n  [3] Enterprise Digital Workspace — Singapore (BA Lead)\n  [4] Sales Incentivization Portal — Automotive (BA)\n> All systems: operational",
+    "system-health":    "> System health report:\n  Uptime: 5+ years\n  Fuel level: ☕ Coffee\n  Runtime mode: High Availability\n  Domain expertise: LOADED\n  Recovery protocol: Trekking + Islands + Books\n  Status: FULLY OPERATIONAL",
+    "contact":          "> Reach Kaitlyn:\n  Email: phuonglt13.sic@gmail.com\n  Location: Ho Chi Minh City, Vietnam\n  Timezone: GMT+7\n  Response SLA: <24h",
+    "current-location": "> Runtime environment: Ho Chi Minh City, Vietnam\n  Mode: Operational\n  Local time: calculating...\n  Status: Online",
+    "next-destination": "> Scanning travel queue...\n  Next protocol: Unknown — that's the point.\n  Mode: Spontaneous local exploration\n  System: Eager",
+    "currently-reading":"Reading stack:\n  [active] Continuous Discovery Habits\n  [queued] Thinking in Systems\n  [completed] The Goal\n  Domain: Product × Systems × Finance"
   }
 }
