@@ -1,0 +1,817 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --o:#E8622A;
+  --o-dim:rgba(232,98,42,0.1);
+  --o-brd:rgba(232,98,42,0.22);
+  --ink:#0C0A08;
+  --ink2:#2E2B27;
+  --ink3:#6B6560;
+  --sand:#F9F6F2;
+  --sand2:#EFE9E1;
+  --sand3:#E2D9CE;
+  --dk:#151210;
+  --dk2:#1C1916;
+  --dk3:#252019;
+  --dk4:#2F2922;
+  --radius:12px;
+}
+
+body{background:var(--ink);color:var(--sand);font-family:'Outfit',sans-serif;font-size:13px;}
+
+/* ── NAV ─────────────────────────── */
+.nav{
+  position:sticky;top:0;z-index:99;
+  background:rgba(12,10,8,0.96);
+  border-bottom:1px solid var(--dk4);
+  padding:0 20px;
+  display:flex;justify-content:space-between;align-items:center;
+  height:48px;
+}
+.nav-logo{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:19px;letter-spacing:0.12em;
+  color:var(--o);
+}
+.nav-tabs{display:flex;gap:2px;}
+.tab{
+  font-size:11px;font-weight:400;
+  color:var(--ink3);padding:6px 13px;
+  border-radius:6px;border:none;
+  background:none;cursor:pointer;
+  transition:all .15s;letter-spacing:0.04em;
+  font-family:'Outfit',sans-serif;
+}
+.tab:hover{color:var(--sand);background:var(--dk3);}
+.tab.on{color:var(--o);background:var(--o-dim);}
+
+/* ── PAGES ───────────────────────── */
+.page{display:none;max-width:680px;margin:0 auto;padding:20px 18px 56px;}
+.page.on{display:block;}
+
+/* ── HERO ────────────────────────── */
+.hero{
+  background:var(--o);border-radius:18px;
+  padding:34px 30px 30px;margin-bottom:10px;
+  position:relative;overflow:hidden;
+}
+.hero-deco{
+  position:absolute;font-family:'Bebas Neue',sans-serif;
+  color:rgba(12,10,8,0.07);pointer-events:none;line-height:1;
+}
+.hero-pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;}
+.hero-pill{
+  font-size:10px;font-weight:500;
+  background:rgba(12,10,8,0.13);color:var(--ink);
+  padding:3px 11px;border-radius:20px;letter-spacing:0.04em;
+}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:62px;line-height:.9;
+  color:var(--ink);letter-spacing:.02em;
+  margin-bottom:14px;position:relative;z-index:1;
+}
+.hero h1 em{color:#fff;font-style:normal;}
+.hero-sub{
+  font-size:12px;font-weight:300;
+  color:rgba(12,10,8,.6);line-height:1.75;
+  max-width:400px;margin-bottom:22px;
+  position:relative;z-index:1;
+  font-family:'Outfit',sans-serif;
+}
+.hero-btns{display:flex;gap:8px;position:relative;z-index:1;}
+.btn-dk{
+  background:var(--ink);color:var(--sand);
+  font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;
+  padding:9px 20px;border-radius:8px;border:none;cursor:pointer;
+  transition:opacity .15s;
+}
+.btn-dk:hover{opacity:.8;}
+.btn-wh{
+  background:#fff;color:var(--o);
+  font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;
+  padding:9px 20px;border-radius:8px;border:none;cursor:pointer;
+  transition:opacity .15s;
+}
+.btn-wh:hover{opacity:.88;}
+
+/* ── TICKER ──────────────────────── */
+.ticker{
+  overflow:hidden;border-radius:10px;
+  border:1px solid var(--dk4);
+  background:var(--dk2);padding:8px 0;
+  margin-bottom:10px;
+}
+.ticker-track{
+  display:flex;gap:22px;width:max-content;
+  animation:scroll 28s linear infinite;white-space:nowrap;
+}
+@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.t-i{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;font-size:11px;color:var(--ink3);}
+.t-sym{font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--o);}
+
+/* ── BENTO ───────────────────────── */
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+.card{border-radius:var(--radius);padding:18px;position:relative;overflow:hidden;transition:transform .15s;}
+.card:hover{transform:translateY(-2px);}
+.card.w2{grid-column:1/-1;}
+
+/* card skins */
+.ck-dk {background:var(--dk);border:1px solid var(--dk4);}
+.ck-dk2{background:var(--dk2);border:1px solid var(--dk4);}
+.ck-o  {background:var(--o);border:none;}
+.ck-s  {background:var(--sand);border:1px solid var(--sand3);}
+.ck-s2 {background:var(--sand2);border:1px solid var(--sand3);}
+
+/* typography atoms */
+.eye{font-size:9px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;margin-bottom:8px;}
+.eye-m{color:var(--ink3);}
+.eye-s{color:rgba(249,246,242,.35);}
+.eye-k{color:var(--ink2);}
+.eye-o{color:rgba(12,10,8,.45);}
+
+.big{font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;line-height:1.05;margin-bottom:6px;}
+.big-s{color:var(--sand);}
+.big-k{color:var(--ink);}
+.big-o{color:var(--o);}
+.big-w{color:#fff;}
+.fs32{font-size:32px;}
+.fs26{font-size:26px;}
+.fs20{font-size:20px;}
+
+.body{font-size:11px;font-weight:300;line-height:1.7;}
+.body-m{color:var(--ink3);}
+.body-s{color:rgba(249,246,242,.5);}
+.body-k{color:var(--ink2);}
+.body-o{color:rgba(12,10,8,.6);}
+
+/* ── STATS ───────────────────────── */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;}
+.stat{padding:14px 10px;border-radius:10px;text-align:center;background:var(--dk2);}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--o);letter-spacing:.04em;display:block;}
+.stat-l{font-size:9px;color:var(--ink3);margin-top:2px;display:block;line-height:1.4;}
+
+/* ── STRIP ───────────────────────── */
+.strip{background:var(--o);border-radius:10px;overflow:hidden;padding:9px 0;margin-bottom:10px;}
+.strip-track{display:flex;gap:18px;width:max-content;animation:scroll 22s linear infinite;white-space:nowrap;}
+.strip-item{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.1em;color:var(--ink);flex-shrink:0;display:inline-flex;align-items:center;gap:14px;}
+.strip-sep{color:rgba(12,10,8,.25);}
+
+/* ── TAGS ────────────────────────── */
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
+.tag{font-size:10px;padding:4px 10px;border-radius:6px;}
+.tg-o{background:var(--o-dim);color:var(--o);border:1px solid var(--o-brd);}
+.tg-s{background:var(--sand2);color:var(--ink2);border:1px solid var(--sand3);}
+.tg-d{background:var(--dk2);color:var(--ink3);border:1px solid var(--dk4);}
+.tg-ok{background:rgba(74,222,128,.1);color:#4ADE80;border:1px solid rgba(74,222,128,.2);}
+.tg-ip{background:var(--o-dim);color:var(--o);border:1px solid var(--o-brd);}
+
+/* ── DOMAIN GRID ─────────────────── */
+.domain-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
+.domain-cell{background:var(--dk);border:1px solid var(--dk4);border-radius:10px;padding:12px;}
+.domain-icon{font-size:18px;margin-bottom:7px;}
+.domain-name{font-size:11px;font-weight:500;color:var(--sand);margin-bottom:4px;}
+.domain-desc{font-size:10px;font-weight:300;color:var(--ink3);line-height:1.55;}
+
+/* ── SKILL SECTION ───────────────── */
+.skill-sect{margin-bottom:10px;}
+.skill-label{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--o);margin-bottom:7px;}
+
+/* ── TIMELINE ────────────────────── */
+.tl{display:flex;flex-direction:column;gap:0;}
+.tl-row{display:flex;gap:14px;padding-bottom:22px;}
+.tl-row:last-child{padding-bottom:0;}
+.tl-spine{display:flex;flex-direction:column;align-items:center;width:32px;flex-shrink:0;}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:var(--o);flex-shrink:0;margin-top:5px;}
+.tl-dot.sm{width:7px;height:7px;background:var(--dk4);margin-top:7px;}
+.tl-line{width:1px;background:var(--dk4);flex:1;margin-top:5px;}
+.tl-body{flex:1;}
+.tl-co{font-size:13px;font-weight:500;color:var(--sand);margin-bottom:1px;}
+.tl-role{font-size:11px;color:var(--o);font-weight:400;margin-bottom:2px;}
+.tl-date{font-size:10px;color:var(--ink3);margin-bottom:8px;font-family:'DM Mono',monospace;}
+.tl-li{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.tl-li li{font-size:11px;font-weight:300;color:var(--ink3);line-height:1.55;padding-left:12px;position:relative;}
+.tl-li li::before{content:'—';position:absolute;left:0;color:var(--dk4);}
+
+/* awards pill */
+.award{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:500;color:#FBBF24;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.2);padding:2px 8px;border-radius:4px;margin-top:6px;margin-right:4px;}
+
+/* ── CASE CARDS ──────────────────── */
+.case{background:var(--dk);border:1px solid var(--dk4);border-radius:var(--radius);padding:18px;margin-bottom:10px;transition:border-color .15s;}
+.case:hover{border-color:var(--o);}
+.case-hd{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;}
+.case-ico{width:36px;height:36px;border-radius:9px;background:var(--o-dim);border:1px solid var(--o-brd);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.case-chips{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px;}
+.case-chip{font-size:9px;font-weight:500;color:var(--o);background:var(--o-dim);border:1px solid var(--o-brd);padding:2px 7px;border-radius:4px;}
+.case-name{font-size:13px;font-weight:500;color:var(--sand);}
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.trio-cell{background:var(--dk2);border-radius:8px;padding:10px;}
+.trio-lbl{font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:4px;}
+.trio-txt{font-size:10px;font-weight:300;color:rgba(249,246,242,.55);line-height:1.6;}
+
+/* ── QUOTE ───────────────────────── */
+.quote-block{background:var(--o);border-radius:14px;padding:24px 26px;margin-bottom:10px;position:relative;overflow:hidden;}
+.quote-deco{position:absolute;font-family:'Instrument Serif',serif;font-size:160px;right:-10px;bottom:-40px;color:rgba(12,10,8,.07);line-height:1;pointer-events:none;font-style:italic;}
+.quote-text{font-family:'Instrument Serif',serif;font-style:italic;font-size:18px;color:var(--ink);line-height:1.45;position:relative;z-index:1;}
+
+/* ── EDU ─────────────────────────── */
+.edu{display:flex;gap:12px;padding:13px;background:var(--dk2);border-radius:10px;border:1px solid var(--dk4);margin-bottom:8px;}
+.edu-ico{width:32px;height:32px;border-radius:8px;background:var(--o-dim);border:1px solid var(--o-brd);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.edu-title{font-size:12px;font-weight:500;color:var(--sand);margin-bottom:2px;}
+.edu-sub{font-size:11px;color:var(--o);}
+.edu-date{font-size:10px;color:var(--ink3);font-family:'DM Mono',monospace;}
+
+/* cert row */
+.cert{display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--dk2);border-radius:8px;border:1px solid var(--dk4);margin-bottom:6px;}
+.cert-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.cert-name{font-size:11px;font-weight:300;color:var(--sand);flex:1;}
+.cert-yr{font-size:10px;font-family:'DM Mono',monospace;}
+
+/* ── CTA ─────────────────────────── */
+.cta{background:var(--sand);border-radius:14px;padding:28px;text-align:center;position:relative;overflow:hidden;margin-top:10px;}
+.cta-deco{position:absolute;font-family:'Bebas Neue',sans-serif;color:var(--sand3);line-height:1;pointer-events:none;}
+.cta-title{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.04em;color:var(--ink);margin-bottom:6px;position:relative;z-index:1;}
+.cta-sub{font-size:12px;font-weight:300;color:var(--ink2);margin-bottom:18px;position:relative;z-index:1;}
+.btn-o{background:var(--o);color:#fff;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;padding:10px 24px;border-radius:8px;border:none;cursor:pointer;transition:opacity .15s;position:relative;z-index:1;}
+.btn-o:hover{opacity:.88;}
+
+/* ── LANG ROW ────────────────────── */
+.lang-row{display:flex;gap:8px;flex-wrap:wrap;}
+.lang{background:var(--dk);border:1px solid var(--dk4);border-radius:10px;padding:11px 16px;text-align:center;flex:1;min-width:80px;}
+.lang-flag{font-size:18px;margin-bottom:4px;}
+.lang-name{font-size:11px;font-weight:500;color:var(--sand);}
+.lang-lv{font-size:10px;color:var(--o);margin-top:1px;}
+
+/* ── WORKSPACE HIGHLIGHT ─────────── */
+.ws-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:#A78BFA;background:rgba(167,139,250,.1);
+  border:1px solid rgba(167,139,250,.22);
+  padding:3px 9px;border-radius:5px;margin-bottom:8px;
+}
+
+/* currently row */
+.now-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;}
+.now-ico{font-size:15px;flex-shrink:0;margin-top:1px;}
+.now-title{font-size:11px;font-weight:500;color:var(--sand);margin-bottom:2px;}
+.now-body{font-size:11px;font-weight:300;color:var(--ink3);line-height:1.55;}
+</style>
+
+<div>
+<!-- NAV -->
+<nav class="nav">
+  <span class="nav-logo">KAITLYNARY</span>
+  <div class="nav-tabs">
+    <button class="tab on"  onclick="go('p1',this)">Home</button>
+    <button class="tab"     onclick="go('p2',this)">Skills</button>
+    <button class="tab"     onclick="go('p3',this)">Journey</button>
+    <button class="tab"     onclick="go('p4',this)">Work</button>
+    <button class="tab"     onclick="go('p5',this)">About</button>
+  </div>
+</nav>
+
+<!-- ════════════════ PAGE 1 ════════════════ -->
+<div class="page on" id="p1">
+
+  <div class="hero">
+    <div class="hero-deco" style="font-size:190px;right:-24px;top:-38px;">$</div>
+    <div class="hero-deco" style="font-size:85px;left:16px;bottom:-14px;">₫</div>
+    <div class="hero-deco" style="font-size:52px;right:88px;bottom:20px;opacity:.06;">€</div>
+    <div class="hero-pills">
+      <span class="hero-pill">Product Owner · Senior BA</span>
+      <span class="hero-pill">Hanoi ↔ HCM City</span>
+      <span class="hero-pill">Open to opportunities</span>
+    </div>
+    <h1>I SHIP<br>PRODUCTS<br><em>THAT MOVE</em><br>MONEY</h1>
+    <p class="hero-sub">5+ years turning financial complexity into products that actually ship — from APAC government ministries to a 60-country ERP at Mantu. I live where compliance meets delivery.</p>
+    <div class="hero-btns">
+      <button class="btn-dk" onclick="go('p4',document.querySelectorAll('.tab')[3])">See my work ↗</button>
+      <button class="btn-wh" onclick="go('p5',document.querySelectorAll('.tab')[4])">Get in touch</button>
+    </div>
+  </div>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span class="t-i"><span class="t-sym">$</span>Product Owner · Mantu · 60+ countries</span>
+      <span class="t-i"><span class="t-sym">€</span>E-invoicing · EU & APAC compliance</span>
+      <span class="t-i"><span class="t-sym">₫</span>Gov finance digitalization · APAC</span>
+      <span class="t-i"><span class="t-sym">£</span>ERP · SAP · Workday · SharePoint</span>
+      <span class="t-i"><span class="t-sym">¥</span>Agile PO · BA Lead · PM · Cross-timezone</span>
+      <span class="t-i"><span class="t-sym">$</span>Product Owner · Mantu · 60+ countries</span>
+      <span class="t-i"><span class="t-sym">€</span>E-invoicing · EU & APAC compliance</span>
+      <span class="t-i"><span class="t-sym">₫</span>Gov finance digitalization · APAC</span>
+      <span class="t-i"><span class="t-sym">£</span>ERP · SAP · Workday · SharePoint</span>
+      <span class="t-i"><span class="t-sym">¥</span>Agile PO · BA Lead · PM · Cross-timezone</span>
+    </div>
+  </div>
+
+  <div class="bento">
+
+    <div class="card ck-dk w2">
+      <div class="eye eye-m">impact by numbers</div>
+      <div class="stats">
+        <div class="stat"><span class="stat-n">60+</span><span class="stat-l">Countries in current PO scope at Mantu</span></div>
+        <div class="stat"><span class="stat-n">50+</span><span class="stat-l">Business workflows streamlined at CMC</span></div>
+        <div class="stat"><span class="stat-n">95%</span><span class="stat-l">Stakeholder satisfaction rate across clients</span></div>
+      </div>
+    </div>
+
+    <div class="card ck-o">
+      <div class="eye eye-o">right now</div>
+      <div class="big big-k fs26">GLOBAL<br>FINANCE PO</div>
+      <div class="body body-o">Owning the Cash & Working Capital pillar at Mantu — 60+ countries, 20+ subsidiaries, 5 e-invoicing gateways.</div>
+    </div>
+
+    <div class="card ck-dk">
+      <div class="eye eye-m">the rare combo</div>
+      <div class="big big-o fs26">BA × PO<br>HYBRID</div>
+      <div class="body body-m">Promoted to PM by clients. Appointed PO in-house. I've done both sides of the table — that's the whole point.</div>
+    </div>
+
+    <div class="card ck-dk2 w2">
+      <div class="eye eye-m">where I operate</div>
+      <div class="big big-s fs20" style="margin-bottom:12px;">DOMAIN COVERAGE</div>
+      <div class="domain-grid">
+        <div class="domain-cell">
+          <div class="domain-icon">🏛</div>
+          <div class="domain-name">Gov Finance Digitalization</div>
+          <div class="domain-desc">Finance ministry products for APAC gov — where the margin for error is literally zero</div>
+        </div>
+        <div class="domain-cell">
+          <div class="domain-icon">📑</div>
+          <div class="domain-name">E-invoicing & EU Compliance</div>
+          <div class="domain-desc">Belgium, Portugal, Italy, China, Vietnam — regulatory mandates turned into product specs</div>
+        </div>
+        <div class="domain-cell">
+          <div class="domain-icon">💱</div>
+          <div class="domain-name">Cash & Working Capital</div>
+          <div class="domain-desc">End-to-end: Cash Advance → Expense → Billing → Payment → Accounting → GL entries</div>
+        </div>
+        <div class="domain-cell">
+          <div class="domain-icon">🌐</div>
+          <div class="domain-name">Global Enterprise DX</div>
+          <div class="domain-desc">Automotive in Korea/Turkey/Germany, marine, construction, data centers — cross-timezone delivery</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════ PAGE 2 ════════════════ -->
+<div class="page" id="p2">
+  <div class="strip">
+    <div class="strip-track">
+      <span class="strip-item">PRODUCT OWNERSHIP <span class="strip-sep">✦</span></span>
+      <span class="strip-item">BA CRAFT <span class="strip-sep">✦</span></span>
+      <span class="strip-item">FINANCE DOMAIN <span class="strip-sep">✦</span></span>
+      <span class="strip-item">ERP INTEGRATION <span class="strip-sep">✦</span></span>
+      <span class="strip-item">PRODUCT OWNERSHIP <span class="strip-sep">✦</span></span>
+      <span class="strip-item">BA CRAFT <span class="strip-sep">✦</span></span>
+      <span class="strip-item">FINANCE DOMAIN <span class="strip-sep">✦</span></span>
+      <span class="strip-item">ERP INTEGRATION <span class="strip-sep">✦</span></span>
+    </div>
+  </div>
+
+  <div class="bento">
+
+    <div class="card ck-o w2">
+      <div class="eye eye-o">PO skills</div>
+      <div class="big big-k fs20">PRODUCT OWNERSHIP</div>
+      <div class="body body-o" style="margin-bottom:10px;">Strategy to sprint. Discovery to delivery. Backlogs that are actually prioritized for the right reasons.</div>
+      <div class="tags">
+        <span class="tag" style="background:rgba(12,10,8,.13);color:var(--ink);border:1px solid rgba(12,10,8,.2);">Product strategy & roadmapping</span>
+        <span class="tag" style="background:rgba(12,10,8,.13);color:var(--ink);border:1px solid rgba(12,10,8,.2);">Backlog prioritization</span>
+        <span class="tag" style="background:rgba(12,10,8,.13);color:var(--ink);border:1px solid rgba(12,10,8,.2);">Sprint planning & refinement</span>
+        <span class="tag" style="background:rgba(12,10,8,.13);color:var(--ink);border:1px solid rgba(12,10,8,.2);">Acceptance criteria</span>
+        <span class="tag" style="background:rgba(12,10,8,.13);color:var(--ink);border:1px solid rgba(12,10,8,.2);">Executive stakeholder management</span>
+        <span class="tag" style="background:rgba(12,10,8,.13);color:var(--ink);border:1px solid rgba(12,10,8,.2);">OKR alignment</span>
+        <span class="tag" style="background:rgba(12,10,8,.13);color:var(--ink);border:1px solid rgba(12,10,8,.2);">Release planning</span>
+        <span class="tag" style="background:rgba(12,10,8,.13);color:var(--ink);border:1px solid rgba(12,10,8,.2);">Agile Scrum leadership</span>
+        <span class="tag" style="background:rgba(12,10,8,.13);color:var(--ink);border:1px solid rgba(12,10,8,.2);">Lean Startup</span>
+      </div>
+    </div>
+
+    <div class="card ck-dk">
+      <div class="eye eye-m">BA craft</div>
+      <div class="big big-o fs20">ANALYSIS & DELIVERY</div>
+      <div class="tags">
+        <span class="tag tg-o">Requirements elicitation</span>
+        <span class="tag tg-o">BRD · SRS · FRD</span>
+        <span class="tag tg-o">Process modeling · BPMN</span>
+        <span class="tag tg-o">User story writing</span>
+        <span class="tag tg-o">UAT coordination</span>
+        <span class="tag tg-o">Gap analysis</span>
+        <span class="tag tg-o">API mapping · ERD</span>
+        <span class="tag tg-o">Data dictionary</span>
+        <span class="tag tg-o">UI/UX prototyping</span>
+        <span class="tag tg-o">Stakeholder workshops</span>
+      </div>
+    </div>
+
+    <div class="card ck-dk2">
+      <div class="eye eye-m">finance domain</div>
+      <div class="big big-s fs20">MONEY KNOWLEDGE</div>
+      <div class="tags">
+        <span class="tag tg-d">E-invoicing compliance</span>
+        <span class="tag tg-d">Cash advance lifecycle</span>
+        <span class="tag tg-d">Billing & payment</span>
+        <span class="tag tg-d">AP · AR tracking</span>
+        <span class="tag tg-d">GL & accounting entries</span>
+        <span class="tag tg-d">Currency conversion</span>
+        <span class="tag tg-d">Tax regulatory mapping</span>
+        <span class="tag tg-d">Financial workflows</span>
+        <span class="tag tg-d">KPI & reporting logic</span>
+      </div>
+    </div>
+
+    <div class="card ck-s w2">
+      <div class="eye eye-k">tools & platforms</div>
+      <div class="big big-k fs20" style="margin-bottom:12px;">THE TOOLBOX</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div>
+          <div class="skill-label">E-invoicing gateways</div>
+          <div class="tags" style="margin-top:0;">
+            <span class="tag tg-s">Sovos</span><span class="tag tg-s">SEAM</span><span class="tag tg-s">Indicom</span><span class="tag tg-s">MISA</span><span class="tag tg-s">MagniFinance</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-label">ERP & enterprise</div>
+          <div class="tags" style="margin-top:0;">
+            <span class="tag tg-s">SAP S/4HANA</span><span class="tag tg-s">Workday</span><span class="tag tg-s">Kyriba</span><span class="tag tg-s">Expensya</span><span class="tag tg-s">TravelPerk</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-label">Design & modelling</div>
+          <div class="tags" style="margin-top:0;">
+            <span class="tag tg-s">Figma</span><span class="tag tg-s">draw.io</span><span class="tag tg-s">Miro</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-label">Low-code & automation</div>
+          <div class="tags" style="margin-top:0;">
+            <span class="tag tg-s">MS Power Platform</span><span class="tag tg-s">SharePoint</span><span class="tag tg-s">DocuSign</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-label">Data & API</div>
+          <div class="tags" style="margin-top:0;">
+            <span class="tag tg-s">MySQL</span><span class="tag tg-s">DBeaver</span><span class="tag tg-s">SQL</span><span class="tag tg-s">Postman</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-label">Delivery</div>
+          <div class="tags" style="margin-top:0;">
+            <span class="tag tg-s">Jira</span><span class="tag tg-s">Confluence</span><span class="tag tg-s">Zoho Suite</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card ck-dk2 w2">
+      <div class="eye eye-m">languages</div>
+      <div class="lang-row">
+        <div class="lang"><div class="lang-flag">🇺🇸</div><div class="lang-name">English</div><div class="lang-lv">IELTS 7.0 · TOEIC 885</div></div>
+        <div class="lang"><div class="lang-flag">🇯🇵</div><div class="lang-name">Japanese</div><div class="lang-lv">JLPT N3</div></div>
+        <div class="lang"><div class="lang-flag">🇻🇳</div><div class="lang-name">Vietnamese</div><div class="lang-lv">Native</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════ PAGE 3 ════════════════ -->
+<div class="page" id="p3">
+
+  <div class="card ck-o w2" style="border-radius:14px;padding:20px;margin-bottom:10px;">
+    <div class="eye eye-o">the journey</div>
+    <div class="big big-k fs26">NOT A STRAIGHT LINE. THAT'S THE POINT.</div>
+    <div class="body body-o" style="margin-top:6px;">Started as delivery support. Grew into BA. Got promoted to PM by international clients. Appointed PO in outsourcing. Now owning a 60-country financial ecosystem at Mantu.</div>
+  </div>
+
+  <div class="card ck-dk w2">
+    <div class="tl">
+
+      <div class="tl-row">
+        <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-co">Mantu</div>
+          <div class="tl-role">Product Owner — Global Financial Management System · Cash & Working Capital</div>
+          <div class="tl-date">05/2025 – Present · Ho Chi Minh City</div>
+          <ul class="tl-li">
+            <li>Own end-to-end Financial Execution Ecosystem across 60+ countries — Cash Advance → Expense → Billing → Payment → Accounting</li>
+            <li>Lead global e-invoicing for 20+ subsidiaries across Belgium, Portugal, Italy, China & Vietnam (Sovos, SEAM, Indicom, MISA, MagniFinance)</li>
+            <li>Designed complex API data flows and XML/JSON schemas ensuring 100% tax compliance across EU and Asian markets on a shared ERP</li>
+            <li>Architect central financial middleware distributing expense data from Expensya & TravelPerk to Kyriba payouts, client billing, and ERP GL entries</li>
+            <li>Operate across Europe, Latin America & Asia — daily collaboration with Finance, Treasury, Legal, and Engineering leaders</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-co">CMC Global</div>
+          <div class="tl-role">Senior Business Analyst → BA Lead → Project Manager → Product Owner</div>
+          <div class="tl-date">06/2023 – 04/2025 · Hanoi</div>
+          <ul class="tl-li">
+            <li>Delivered 5+ long-term projects (6–12 months) across gov, marine, construction, and global automotive</li>
+            <li>Streamlined 50+ business workflows — up to 25% faster processing times</li>
+            <li>Promoted to PM by international client, led a 20-member team; BA Lead across three simultaneous projects</li>
+            <li>Appointed Product Owner — owned backlog and aligned product vision with client PMs</li>
+            <li>95% stakeholder satisfaction across all international clients</li>
+          </ul>
+          <div>
+            <span class="award">⭐ Outstanding Performance 2024</span>
+            <span class="award">⭐ Rising Star Q4/2023</span>
+            <span class="award">⭐ Best Project 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-co">SmartOSC</div>
+          <div class="tl-role">Business Analyst</div>
+          <div class="tl-date">10/2022 – 06/2023 · Hanoi</div>
+          <ul class="tl-li">
+            <li>Delivered 2 end-to-end DX projects from requirements to UAT using Jira & Zoho Suite</li>
+            <li>Defined KPIs, calculation formulas, and business rules for performance tracking systems</li>
+            <li>Authored BRD, SRS, API mappings, ERD, and data dictionaries; built UI mockups in Figma</li>
+            <li>Conducted SQL queries and data analysis for reporting and integration requirements</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-spine"><div class="tl-dot sm"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-co">Savvycom</div>
+          <div class="tl-role">Business Analyst</div>
+          <div class="tl-date">08/2022 – 10/2022 · Hanoi</div>
+          <ul class="tl-li">
+            <li>Authored SRS, FRD and BPMN workflows across LMS, Healthcare, and HRM domains</li>
+            <li>Supported pre-sales requirements breakdown and UI/UX prototyping</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-spine"><div class="tl-dot sm"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-co">Equest Education Group</div>
+          <div class="tl-role">Product Owner Assistant</div>
+          <div class="tl-date">03/2020 – 12/2021 · Hanoi</div>
+          <ul class="tl-li">
+            <li>Mapped customer journeys, contributed to UX improvement initiatives</li>
+            <li>Created training guides and end-user documentation; first exposure to product thinking</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-spine"><div class="tl-dot sm"></div></div>
+        <div class="tl-body">
+          <div class="tl-co">Securities Investment Club — FTU</div>
+          <div class="tl-role">Deputy Head, Industry Research Department</div>
+          <div class="tl-date">2019 – 2020 · Hanoi</div>
+          <ul class="tl-li">
+            <li>Led industry research and securities analysis — first contact with finance domain</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ PAGE 4 ════════════════ -->
+<div class="page" id="p4">
+  <div class="strip" style="margin-bottom:10px;">
+    <div class="strip-track">
+      <span class="strip-item">MANTU FINANCIAL ECOSYSTEM <span class="strip-sep">✦</span></span>
+      <span class="strip-item">APAC GOV FINANCE SYSTEM <span class="strip-sep">✦</span></span>
+      <span class="strip-item">DIGITAL WORKSPACE BUILD <span class="strip-sep">✦</span></span>
+      <span class="strip-item">AUTOMOTIVE INCENTIVE PLATFORM <span class="strip-sep">✦</span></span>
+      <span class="strip-item">MANTU FINANCIAL ECOSYSTEM <span class="strip-sep">✦</span></span>
+      <span class="strip-item">APAC GOV FINANCE SYSTEM <span class="strip-sep">✦</span></span>
+      <span class="strip-item">DIGITAL WORKSPACE BUILD <span class="strip-sep">✦</span></span>
+      <span class="strip-item">AUTOMOTIVE INCENTIVE PLATFORM <span class="strip-sep">✦</span></span>
+    </div>
+  </div>
+
+  <!-- Case 1: Mantu -->
+  <div class="case">
+    <div class="case-hd">
+      <div class="case-ico">🌍</div>
+      <div>
+        <div class="case-name">Global Financial Execution Ecosystem — Mantu</div>
+        <div class="case-chips">
+          <span class="case-chip">Product Owner</span>
+          <span class="case-chip">60+ countries</span>
+          <span class="case-chip">20+ subsidiaries</span>
+          <span class="case-chip">Sovos · SEAM · Indicom · MISA · MagniFinance</span>
+        </div>
+      </div>
+    </div>
+    <div class="trio">
+      <div class="trio-cell">
+        <div class="trio-lbl">Problem</div>
+        <div class="trio-txt">60+ countries. 20+ subsidiaries. Fragmented e-invoicing across EU and Asia on a single shared ERP. Every country had different tax mandates, schemas, and compliance deadlines — with zero unified approach.</div>
+      </div>
+      <div class="trio-cell">
+        <div class="trio-lbl">What I own</div>
+        <div class="trio-txt">End-to-end Cash & Working Capital pillar: Cash Advance → Expense Declaration → Billing → Payment → GL entries. Architected central financial middleware connecting Expensya, TravelPerk, Kyriba, and the ERP simultaneously. Designed API flows and XML/JSON schemas per country gateway.</div>
+      </div>
+      <div class="trio-cell">
+        <div class="trio-lbl">Outcome</div>
+        <div class="trio-txt">100% tax compliance across all active markets. Multi-gateway e-invoicing live: Belgium/France (Sovos), China (SEAM), Italy (Indicom), Vietnam (MISA), Portugal (MagniFinance). ERP synchronization governing AR/AP lifecycle and audit traceability.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case 2: GOV -->
+  <div class="case">
+    <div class="case-hd">
+      <div class="case-ico">🏛</div>
+      <div>
+        <div class="case-name">Finance Management System — APAC Government Ministry</div>
+        <div class="case-chips">
+          <span class="case-chip">Business Analyst</span>
+          <span class="case-chip">25-person team</span>
+          <span class="case-chip">15 months</span>
+          <span class="case-chip">SharePoint · Agile SDLC</span>
+        </div>
+      </div>
+    </div>
+    <div class="trio">
+      <div class="trio-cell">
+        <div class="trio-lbl">Problem</div>
+        <div class="trio-txt">A government finance ministry ran invoices, payment vouchers, and approvals on paper. Slow, unauditable, zero traceability. NDA project.</div>
+      </div>
+      <div class="trio-cell">
+        <div class="trio-lbl">What I did</div>
+        <div class="trio-txt">Collaborated with Singapore UX/UI squad and Vietnamese scrum teams. Mapped workflows via activity, DFD, state, and use case diagrams. Traveled onsite to Singapore for intensive discovery sessions with end users.</div>
+      </div>
+      <div class="trio-cell">
+        <div class="trio-lbl">Outcome</div>
+        <div class="trio-txt">Fully digitized core finance workflows on SharePoint. Paper chaos → auditable digital processes. Ministry stakeholders validated through structured UAT.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case 3: Digital Workspace -->
+  <div class="case">
+    <div class="case-hd">
+      <div class="case-ico">🏢</div>
+      <div>
+        <div class="case-name">Enterprise Digital Workspace — Post-Spinoff Company Build</div>
+        <div class="case-chips">
+          <span class="case-chip">BA Lead</span>
+          <span class="case-chip">20-person team</span>
+          <span class="case-chip">7 months</span>
+          <span class="case-chip">SAP S/4HANA · Workday · MS Power Platform</span>
+        </div>
+      </div>
+    </div>
+    <div class="trio">
+      <div class="trio-cell">
+        <div class="trio-lbl">Problem</div>
+        <div class="trio-txt">A Singaporean data center company had just split from its holding group. It needed to build a complete digital workspace from scratch — all departments, all processes, zero existing infrastructure.</div>
+      </div>
+      <div class="trio-cell">
+        <div class="trio-lbl">What I did</div>
+        <div class="trio-txt">Led BA team to automate 40+ core processes across Finance, Procurement, Legal, Sales & HR. Facilitated technical investigations with SAP/Workday experts to define API and data mapping. Managed sprint delivery and BA resourcing across all workstreams simultaneously.</div>
+      </div>
+      <div class="trio-cell">
+        <div class="trio-lbl">Outcome</div>
+        <div class="trio-txt">40+ processes centralized and integrated. Project extended 3 months with 5 additional resources — client confidence signal. Full Go-live and post-launch enhancement delivered.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case 4: Automotive -->
+  <div class="case">
+    <div class="case-hd">
+      <div class="case-ico">🚗</div>
+      <div>
+        <div class="case-name">Sales Incentivization Portal — Global Automotive Brand</div>
+        <div class="case-chips">
+          <span class="case-chip">Business Analyst</span>
+          <span class="case-chip">3 phased releases</span>
+          <span class="case-chip">Korea · Turkey · Thailand</span>
+        </div>
+      </div>
+    </div>
+    <div class="trio">
+      <div class="trio-cell">
+        <div class="trio-lbl">Problem</div>
+        <div class="trio-txt">A top-tier automotive brand had no unified global platform to run sales competitions and incentive programs across multiple markets.</div>
+      </div>
+      <div class="trio-cell">
+        <div class="trio-lbl">What I did</div>
+        <div class="trio-txt">Ran cross-regional requirement workshops. Translated business objectives into wireframes, functional specs, and acceptance criteria. Managed product backlog across 3 phased releases.</div>
+      </div>
+      <div class="trio-cell">
+        <div class="trio-lbl">Outcome</div>
+        <div class="trio-txt">Platform live across Korea, Turkey, Thailand. Agents earning and redeeming points under custom incentive schemes. Delivered iteratively in 3 phases.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ════════════════ PAGE 5 ════════════════ -->
+<div class="page" id="p5">
+
+  <div class="quote-block">
+    <div class="quote-deco">"</div>
+    <div class="quote-text">"I have a business school degree, work with government ministries and 60-country ERPs daily, and I wrote my first BRD before I ever heard the word 'PO'. It all makes sense now."</div>
+  </div>
+
+  <div class="bento">
+
+    <div class="card ck-dk">
+      <div class="eye eye-m">how I work</div>
+      <div class="big big-o fs20">MY OPERATING MODE</div>
+      <div class="body body-m" style="margin-top:8px;">I sit at the table where business complexity meets engineering reality. I don't hand off requirements — I follow through to delivery. Having been BA, PM, and PO on the same projects, I understand what breaks at every transition point. That's what makes me different.</div>
+    </div>
+
+    <div class="card ck-dk2">
+      <div class="eye eye-m">the edge</div>
+      <div class="big big-s fs20">WHY HIRE<br>THE HYBRID</div>
+      <div class="body body-m" style="margin-top:8px;">Most BAs document. I translate. Most POs prioritize. I understand the regulatory why behind every priority. When you're shipping financial products for governments and global ERPs, that distinction matters enormously.</div>
+    </div>
+
+    <div class="card ck-s w2">
+      <div class="eye eye-k">education</div>
+      <div class="edu">
+        <div class="edu-ico">🎓</div>
+        <div>
+          <div class="edu-title">Bachelor — Japanese Style International Business</div>
+          <div class="edu-sub">Foreign Trade University (FTU)</div>
+          <div class="edu-date">2019 – 2023 · Hanoi, Vietnam</div>
+        </div>
+      </div>
+      <div class="edu" style="background:var(--sand2);">
+        <div class="edu-ico">📈</div>
+        <div>
+          <div class="edu-title">Securities Investment Club — Deputy Head, Industry Research</div>
+          <div class="edu-sub">Foreign Trade University</div>
+          <div class="edu-date">2019 – 2020 · First finance domain exposure</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card ck-dk w2">
+      <div class="eye eye-m">certifications</div>
+      <div class="big big-s fs20" style="margin-bottom:12px;">ALWAYS LEARNING</div>
+      <div class="cert"><div class="cert-dot" style="background:var(--o);"></div><div class="cert-name">Plan the Project as a Business Analyst — IIBA Endorsed</div><span class="tag tg-ok cert-yr">2025</span></div>
+      <div class="cert"><div class="cert-dot" style="background:var(--o);"></div><div class="cert-name">PL-900: Microsoft Power Platform Fundamentals</div><span class="tag tg-ok cert-yr">2025</span></div>
+      <div class="cert"><div class="cert-dot" style="background:#4ADE80;"></div><div class="cert-name">Automation Business Analysis — UiPath · Coursera</div><span class="tag tg-ok cert-yr">2023</span></div>
+      <div class="cert"><div class="cert-dot" style="background:#4ADE80;"></div><div class="cert-name">Practical SQL for Data Analytics</div><span class="tag tg-ok cert-yr">2022</span></div>
+      <div class="cert"><div class="cert-dot" style="background:#4ADE80;"></div><div class="cert-name">Product Management Foundation — AIESEC Vietnam</div><span class="tag tg-ok cert-yr">2022</span></div>
+      <div class="cert"><div class="cert-dot" style="background:#4ADE80;"></div><div class="cert-name">User Experience: The Beginner's Guide — IDF</div><span class="tag tg-ok cert-yr">2022</span></div>
+      <div class="cert"><div class="cert-dot" style="background:var(--o);animation:blink 2s infinite;"></div><div class="cert-name">AWS Machine Learning Specialty</div><span class="tag tg-ip cert-yr">In progress</span></div>
+      <div class="cert"><div class="cert-dot" style="background:var(--o);animation:blink 2s infinite;"></div><div class="cert-name">AWS Generative AI</div><span class="tag tg-ip cert-yr">In progress</span></div>
+    </div>
+
+    <div class="card ck-dk2 w2">
+      <div class="eye eye-m">right now</div>
+      <div class="big big-s fs20" style="margin-bottom:12px;">WHAT I'M INTO</div>
+      <div class="now-row"><div class="now-ico">🌏</div><div><div class="now-title">Owning a 60-country PO scope</div><div class="now-body">Learning what it really means to build for global scale — regulatory deadlines in Belgium, compliance gaps in Vietnam, payment flows in Brazil, all at once.</div></div></div>
+      <div class="now-row"><div class="now-ico">📚</div><div><div class="now-title">Reading</div><div class="now-body">Continuous Discovery Habits — thinking about how structured discovery translates to enterprise ERP contexts where the "user" is a treasury director.</div></div></div>
+      <div class="now-row"><div class="now-ico">🎯</div><div><div class="now-title">Building toward</div><div class="now-body">Deepening PO craft in complex financial ecosystems. Looking for the next challenge where money, product, and global scale intersect.</div></div></div>
+    </div>
+
+  </div>
+
+  <div class="cta">
+    <div class="cta-deco" style="font-size:140px;left:-18px;top:-22px;">$</div>
+    <div class="cta-deco" style="font-size:110px;right:8px;bottom:-28px;">€</div>
+    <div class="cta-title">LET'S BUILD SOMETHING THAT MOVES MONEY.</div>
+    <div class="cta-sub">Open to Finance PO roles · Fintech · Global ERP products · Payment platforms</div>
+    <button class="btn-o">phuonglt13.sic@gmail.com ↗</button>
+  </div>
+
+</div>
+</div>
+
+<style>
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+</style>
+<script>
+function go(id,tab){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  if(tab) tab.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
