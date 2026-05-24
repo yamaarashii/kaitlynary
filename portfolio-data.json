@@ -381,6 +381,39 @@
     "email": "phuonglt13.sic@gmail.com"
   },
 
+  "experience_gallery": [
+    {
+      "visible": true,
+      "wide": true,
+      "image_url": "https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=800&q=80",
+      "caption": "Location: Wild Trails · System Status: Recharging ⚡"
+    },
+    {
+      "visible": true,
+      "wide": false,
+      "image_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80",
+      "caption": "Location: Mountain Summit · Mode: Deep Focus Protocol"
+    },
+    {
+      "visible": true,
+      "wide": false,
+      "image_url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80",
+      "caption": "Location: Local Culture Scan · Status: Curiosity.exe Running"
+    },
+    {
+      "visible": true,
+      "wide": false,
+      "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+      "caption": "Location: Reading Station · Process: Knowledge Ingestion v2026"
+    },
+    {
+      "visible": true,
+      "wide": false,
+      "image_url": "https://images.unsplash.com/photo-1527856263669-12c3a0af2aa6?w=600&q=80",
+      "caption": "Location: HCMC Basecamp · Deployment: Active"
+    }
+  ],
+
   "terminal_commands": {
     "about": "Kaitlyn // Finance PO × BA Hybrid. 5+ yrs shipping products where compliance meets delivery. Currently owning 60-country scope at Mantu.",
     "deploy": "Initiating deployment sequence...\n> Scanning: Finance domain ✓\n> Scanning: ERP integration ✓\n> Scanning: Cross-timezone ops ✓\n> Status: READY FOR DEPLOYMENT\n> Contact: phuonglt13.sic@gmail.com",
